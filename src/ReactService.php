@@ -2,8 +2,8 @@
 
 namespace MorningTrain\LaravelReact;
 
-use MorningTrain\Foundation\Context\Context;
-use MorningTrain\Foundation\Support\Traits\ConfiguresProperties;
+use MorningTrain\LaravelContext\Context;
+use MorningTrain\LaravelSupport\Traits\ConfiguresProperties;
 use \Closure;
 
 class ReactService
