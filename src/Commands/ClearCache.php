@@ -1,6 +1,6 @@
 <?php
 
-namespace MorningTrain\LaravelReact\Commands;
+namespace MorningTrain\Laravel\React\Commands;
 
 use Illuminate\Console\Command;
 

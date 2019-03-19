@@ -1,10 +1,10 @@
 <?php
 
-namespace MorningTrain\LaravelReact;
+namespace MorningTrain\Laravel\React;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use MorningTrain\LaravelReact\Commands\ClearCache;
+use MorningTrain\Laravel\React\Commands\ClearCache;
 
 class ReactServiceProvider extends ServiceProvider
 {

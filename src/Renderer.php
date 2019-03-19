@@ -1,6 +1,6 @@
 <?php
 
-namespace MorningTrain\LaravelReact;
+namespace MorningTrain\Laravel\React;
 
 use GuzzleHttp\Client;
 
