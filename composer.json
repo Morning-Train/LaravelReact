@@ -18,6 +18,20 @@
     }
   },
   "require": {
-
+    "php": ">=7.1",
+    "nesbot/carbon": "^2.16",
+    "guzzlehttp/guzzle": "^6.3",
+    "morningtrain/laravel-support": "^1.0",
+    "morningtrain/laravel-context": "^1.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MorningTrain\\Laravel\\React\\ReactServiceProvider"
+      ],
+      "aliases": {
+        "React": "MorningTrain\\Laravel\\React\\React"
+      }
+    }
   }
 }
