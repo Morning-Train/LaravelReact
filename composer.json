@@ -1,5 +1,6 @@
 {
   "name": "morningtrain/laravel-react",
+  "version": "dev",
   "type": "library",
   "description": "A context helper package for Laravel",
   "homepage": "http://morningtrain.dk/",
@@ -22,7 +23,8 @@
     "nesbot/carbon": "^2.16",
     "guzzlehttp/guzzle": "^6.3",
     "morningtrain/laravel-support": "^1.0",
-    "morningtrain/laravel-context": "^1.0"
+    "morningtrain/laravel-context": "^1.0",
+    "illuminate/support": "^5.8"
   },
   "extra": {
     "laravel": {

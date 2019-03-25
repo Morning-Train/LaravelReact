@@ -2,6 +2,7 @@
 
 namespace MorningTrain\Laravel\React;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use MorningTrain\Laravel\React\Commands\ClearCache;
 
@@ -19,6 +20,12 @@ class ReactServiceProvider extends ServiceProvider
                 ClearCache::class
             ]);
         }
+
+        // Load views
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'mt-react');
+
+        // Alias views
+        Blade::include('mt-react::react', 'react');
     }
 
 
