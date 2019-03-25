@@ -1,6 +1,5 @@
 {
   "name": "morningtrain/laravel-react",
-  "version": "dev",
   "type": "library",
   "description": "A context helper package for Laravel",
   "homepage": "http://morningtrain.dk/",
