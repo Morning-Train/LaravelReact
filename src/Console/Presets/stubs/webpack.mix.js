@@ -14,7 +14,45 @@ const mix = require('laravel-mix');
 mix.webpackConfig(require('./webpack.config'));
 
 mix.react('resources/js/app.js', 'public/js')
-    .extract(['axios', 'react', 'react-dom', 'mobx', 'mobx-react', 'moment', 'moment-timezone'])
+    .extract([
+        '@bugsnag/js',
+        'axios',
+        'cleave.js',
+        'lodash',
+        'mobx',
+        'mobx-react',
+        'mobx-utils',
+        'moment',
+        'moment-timezone',
+        'pikaday',
+        'pikaday-time',
+        'prop-types',
+        'pusher-js',
+        'react',
+        'react-dom',
+        'react-quill',
+        'react-toastify',
+        'shortid',
+        "mt-ajax",
+        "mt-helpers",
+        "mt-react-app",
+        "mt-react-core",
+        "mt-react-decorators",
+        "mt-react-errors",
+        "mt-react-filters",
+        "mt-react-fields",
+        "mt-react-modals",
+        "mt-react-polyfill",
+        "mt-react-resources",
+        "mt-resources",
+    ])
     .sass('resources/sass/app.scss', 'public/css')
     .version()
     .sourceMaps();
+
+require('laravel-mix-bundle-analyzer');
+//if (mix.isWatching()) {
+mix.bundleAnalyzer({
+    openAnalyzer: false,
+});
+//}
