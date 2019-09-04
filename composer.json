@@ -1,38 +1,39 @@
 {
-  "name": "morningtrain/laravel-react",
-  "type": "library",
-  "description": "A context helper package for Laravel",
-  "homepage": "http://morningtrain.dk/",
-  "license": "GPL-3.0-only",
-  "authors": [
-    {
-      "name": "Bjarne Bonde",
-      "email": "bb@morningtain.dk",
-      "homepage": "https://morningtrain.dk/",
-      "role": "Developer"
+    "name": "morningtrain/laravel-react",
+    "type": "library",
+    "description": "A context helper package for Laravel",
+    "homepage": "http://morningtrain.dk/",
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Bjarne Bonde",
+            "email": "bb@morningtain.dk",
+            "homepage": "https://morningtrain.dk/",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MorningTrain\\Laravel\\React\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.2",
+        "guzzlehttp/guzzle": "^6.3",
+        "illuminate/console": "^5.8|^6.0",
+        "illuminate/filesystem": "^5.8|^6.0",
+        "illuminate/support": "^5.8|^6.0",
+        "morningtrain/laravel-support": "^1.0",
+        "nesbot/carbon": "^2.16"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MorningTrain\\Laravel\\React\\ReactServiceProvider"
+            ],
+            "aliases": {
+                "React": "MorningTrain\\Laravel\\React\\React"
+            }
+        }
     }
-  ],
-  "autoload": {
-    "psr-4": {
-      "MorningTrain\\Laravel\\React\\": "src/"
-    }
-  },
-  "require": {
-    "php": ">=7.1",
-    "nesbot/carbon": "^2.16",
-    "guzzlehttp/guzzle": "^6.3",
-    "morningtrain/laravel-support": "^1.0",
-    "morningtrain/laravel-context": "^1.0",
-    "illuminate/support": "^5.8"
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "MorningTrain\\Laravel\\React\\ReactServiceProvider"
-      ],
-      "aliases": {
-        "React": "MorningTrain\\Laravel\\React\\React"
-      }
-    }
-  }
 }

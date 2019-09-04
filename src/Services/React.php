@@ -2,6 +2,7 @@
 
 namespace MorningTrain\Laravel\React\Services;
 
+use Illuminate\Support\Arr;
 use MorningTrain\Laravel\Support\Traits\ConfiguresProperties;
 use \Closure;
 
@@ -140,7 +141,7 @@ class React
 
         $props = htmlentities(json_encode($props), ENT_QUOTES);
 
-        $attrs = $this->toHtmlAttributesString(array_except($options, ['tag', 'markup', 'ref']));
+        $attrs = $this->toHtmlAttributesString(Arr::except($options, ['tag', 'markup', 'ref']));
 
         return "<{$tag} data-react-class=\"$component\" data-react-props=\"$props\" data-react-ref=\"$ref\" $attrs>$markup</$tag>";
     }
