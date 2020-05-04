@@ -1,5 +1,11 @@
 # Release Notes
 
+## [2.0.0 (2020-05-04)](https://github.com/Morning-Train/LaravelReact/compare/1.1.0...2.0.0)
+
+- Dropped support for Laravel below version 7.x
+- Updated react scaffolding
+- React preset command now relies on laravel/ui package
+
 ## [1.1.0 (2020-03-04)](https://github.com/Morning-Train/LaravelReact/compare/1.0.6...1.1.0)
 
 - Added support for Laravel 7.x
