@@ -2,9 +2,9 @@
 
 namespace MorningTrain\Laravel\React;
 
-use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Ui\UiCommand;
 use MorningTrain\Laravel\React\Console\ClearCache;
 use MorningTrain\Laravel\React\Console\Presets\Preset;
 
@@ -29,7 +29,8 @@ class ReactServiceProvider extends ServiceProvider
         // Alias views
         Blade::include('mt-react::react', 'react');
 
-        Command::macro('mt-react', function ($command) {
+        UiCommand::macro('react', function ($command) {
+
             Preset::install();
 
             $command->info('Morningtrain React scaffolding installed successfully.');

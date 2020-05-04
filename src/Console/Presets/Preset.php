@@ -4,7 +4,7 @@ namespace MorningTrain\Laravel\React\Console\Presets;
 
 use Illuminate\Support\Arr;
 use Illuminate\Filesystem\Filesystem;
-use Illuminate\Foundation\Console\Presets\Preset as LaravelPreset;
+use Laravel\Ui\Presets\React as LaravelPreset;
 
 class Preset extends LaravelPreset
 {
