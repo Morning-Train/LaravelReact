@@ -11,8 +11,8 @@ import app from "mt-react-app";
 /// Define the services to wrap all pages in
 /// It should be a series of react components that all render their children
 app.services([
-    [require("mt-react-core/providers/Context"), {persist: true, default: {user: 1}}],
-    require("mt-react-core/auth/Service"),
+    require("mt-react-resources/src/OperationRepository").default,
+    require("mt-react-auth/Service").default,
     require("services/Toastify"),
 ]);
 

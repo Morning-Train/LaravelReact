@@ -13,46 +13,24 @@ const mix = require('laravel-mix');
 
 mix.webpackConfig(require('./webpack.config'));
 
-mix.react('resources/js/app.js', 'public/js')
-    .extract([
-        '@bugsnag/js',
-        'axios',
-        'cleave.js',
-        'lodash',
-        'mobx',
-        'mobx-react',
-        'mobx-utils',
-        'moment',
-        'moment-timezone',
-        'pikaday',
-        'pikaday-time',
-        'prop-types',
-        'pusher-js',
-        'react',
-        'react-dom',
-        'react-quill',
-        'react-toastify',
-        'shortid',
-        "mt-ajax",
-        "mt-helpers",
-        "mt-react-app",
-        "mt-react-core",
-        "mt-react-decorators",
-        "mt-react-errors",
-        "mt-react-filters",
-        "mt-react-fields",
-        "mt-react-modals",
-        "mt-react-polyfill",
-        "mt-react-resources",
-        "mt-resources",
-    ])
+mix
+    .react('resources/js/app.js', 'public/js')
+    .react('resources/js/admin.js', 'public/js')
+    .extract()
     .sass('resources/sass/app.scss', 'public/css')
+    .sass('resources/sass/admin.scss', 'public/css')
     .version()
     .sourceMaps();
 
+if (process.env.NODE_ENV === 'development') {
+        mix.setResourceRoot(process.env.APP_URL);
+}
+
 require('laravel-mix-bundle-analyzer');
-//if (mix.isWatching()) {
-mix.bundleAnalyzer({
-    openAnalyzer: false,
-});
-//}
+
+if (mix.isWatching() && process.env.DISABLE_WEBPACK_ANALYZER !== 'true') {
+        mix.bundleAnalyzer({
+                analyzerHost: '0.0.0.0',
+                openAnalyzer: false,
+        });
+}
