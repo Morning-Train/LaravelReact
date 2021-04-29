@@ -25,7 +25,7 @@
         "illuminate/support": "^7.0|^8.0",
         "morningtrain/laravel-support": "^1.0",
         "nesbot/carbon": "^2.16",
-        "laravel/ui": "^2.0"
+        "laravel/ui": "^2.0|^3.0"
     },
     "extra": {
         "laravel": {
